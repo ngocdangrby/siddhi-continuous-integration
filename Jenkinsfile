@@ -20,9 +20,9 @@ docker ps
       }
     }
 
-    stage('junit test') {
+    stage('Testing') {
       parallel {
-        stage('junit test') {
+        stage('unit test') {
           steps {
             sh '''export M2_HOME=/usr/local/maven
 export PATH=$PATH:$M2_HOME/bin
@@ -31,7 +31,7 @@ echo "==========START JunitTEST=========="
 mvn --version
 ls
 cd siddhi-test-suite
-mvn test'''
+mvn test -Dtest=siddhi.test.suite.TemperatureAlertAppUnitTests#testMoniteredFilter test -DfailIfNoTests=false'''
           }
         }
 
@@ -44,7 +44,7 @@ echo "==========START JunitTEST=========="
 mvn --version
 ls
 cd siddhi-test-suite
-mvn test'''
+mvn test -Dtest=siddhi.test.suite.TemperatureAlertAppIntegrationTests#testDBPersistence test -DfailIfNoTests=false'''
           }
         }
 
