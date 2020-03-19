@@ -24,13 +24,12 @@ docker ps
       parallel {
         stage('junit test') {
           steps {
-            sh '''export M2_HOME=/usr/local/maven # your Mavan home path
+            sh '''export M2_HOME=/usr/local/maven
 export PATH=$PATH:$M2_HOME/bin
 
 echo "==========START JunitTEST=========="
 mvn --version
 ls
-cd ..
 cd siddhi-test-suite
 mvn test'''
           }
@@ -38,13 +37,12 @@ mvn test'''
 
         stage('integration test') {
           steps {
-            sh '''export M2_HOME=/usr/local/maven # your Mavan home path
+            sh '''export M2_HOME=/usr/local/maven
 export PATH=$PATH:$M2_HOME/bin
 
 echo "==========START JunitTEST=========="
 mvn --version
 ls
-cd ..
 cd siddhi-test-suite
 mvn test'''
           }
