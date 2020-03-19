@@ -1,172 +1,205 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2017, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>io.siddhi</groupId>
-        <artifactId>io.siddhi.test.suite.parent</artifactId>
-        <version>5.1.0-SNAPSHOT</version>
+        <groupId>org.wso2</groupId>
+        <artifactId>wso2</artifactId>
+        <version>5</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>siddhi.test.suite</artifactId>
-    <packaging>bundle</packaging>
-    <dependencies>
-        <!--Siddhi TestFramework Dependencies-->
-        <dependency>
-            <groupId>io.siddhi.distribution</groupId>
-            <artifactId>io-siddhi-distribution-test-framework</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>testcontainers</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon.datasources</groupId>
-            <artifactId>org.wso2.carbon.datasource.core</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.tools.core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!--Siddhi Dependencies-->
-        <dependency>
-            <groupId>io.siddhi</groupId>
-            <artifactId>siddhi-query-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.siddhi</groupId>
-            <artifactId>siddhi-query-compiler</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.siddhi</groupId>
-            <artifactId>siddhi-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.siddhi</groupId>
-            <artifactId>siddhi-annotations</artifactId>
-            <scope>test</scope>
-        </dependency>
+    <groupId>io.siddhi</groupId>
+    <artifactId>io.siddhi.test.suite.parent</artifactId>
+    <version>5.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Siddhi-IO Test Suite - Parent</name>
+    <modules>
+        <module>siddhi-test-suite</module>
+    </modules>
 
-        <!--Siddhi Extension Dependencies-->
-        <dependency>
-            <groupId>io.siddhi.extension.store.rdbms</groupId>
-            <artifactId>siddhi-store-rdbms</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.siddhi.extension.map.json</groupId>
-            <artifactId>siddhi-map-json</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.siddhi.extension.io.nats</groupId>
-            <artifactId>siddhi-io-nats</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.siddhi.extension.io.http</groupId>
-            <artifactId>siddhi-io-http</artifactId>
-            <scope>test</scope>
-        </dependency>
+    <scm>
+        <url>https://github.com/pcnfernando/siddhi-test-framework.git</url>
+        <developerConnection>scm:git:https://github.com/pcnfernando/siddhi-test-framework.git</developerConnection>
+        <connection>scm:git:https://github.com/pcnfernando/siddhi-test-framework.git</connection>
+        <tag>HEAD</tag>
+    </scm>
 
-        <!--Client Dependencies-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.connector.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.siddhi</groupId>
+                <artifactId>siddhi-query-api</artifactId>
+                <version>${siddhi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi</groupId>
+                <artifactId>siddhi-query-compiler</artifactId>
+                <version>${siddhi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi</groupId>
+                <artifactId>siddhi-core</artifactId>
+                <version>${siddhi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi</groupId>
+                <artifactId>siddhi-annotations</artifactId>
+                <version>${siddhi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.distribution</groupId>
+                <artifactId>io-siddhi-distribution-test-framework</artifactId>
+                <version>${io.siddhi.test.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.datasources</groupId>
+                <artifactId>org.wso2.carbon.datasource.core</artifactId>
+                <version>${carbon.datasources.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers</artifactId>
+                <version>${org.testcontainers.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.map.json</groupId>
+                <artifactId>siddhi-map-json</artifactId>
+                <version>${siddhi.map.json.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.io.nats</groupId>
+                <artifactId>siddhi-io-nats</artifactId>
+                <version>${siddhi.io.nats.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.io.http</groupId>
+                <artifactId>siddhi-io-http</artifactId>
+                <version>${siddhi.io.http.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.store.rdbms</groupId>
+                <artifactId>siddhi-store-rdbms</artifactId>
+                <version>${siddhi.store.rdbms.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.logging</groupId>
+                <artifactId>pax-logging-log4j2</artifactId>
+                <version>${pax.logging.log4j2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.tools.core</artifactId>
+                <version>${wso2.carbon.tools.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                    <configuration>
+                        <testSourceDirectory>${project.build.testSourceDirectory}</testSourceDirectory>
+                        <testClassesDirectory>${project.build.testOutputDirectory}</testClassesDirectory>
+                        <includes>
+                            <include>**/*TestCase.java</include>
+                        </includes>
+                        <useFile>false</useFile>
+                        <forkMode>once</forkMode>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${org.jacoco.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
+                <artifactId>maven-source-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>copy-jars</id>
-                        <phase>compile</phase>
+                        <id>attach-sources</id>
                         <goals>
-                            <goal>copy</goal>
+                            <goal>jar</goal>
                         </goals>
-                        <configuration>
-                            <artifactItems>
-                                <!--Jars to be included for TemperatureAlertAppTest-->
-                                <artifactItem>
-                                    <groupId>com.google.protobuf</groupId>
-                                    <artifactId>protobuf-java</artifactId>
-                                    <version>${protobuf.version}</version>
-                                    <outputDirectory>${project.build.directory}/TemperatureAlertApp/jars
-                                    </outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>mysql</groupId>
-                                    <artifactId>mysql-connector-java</artifactId>
-                                    <version>${mysql.connector.version}</version>
-                                    <outputDirectory>${project.build.directory}/TemperatureAlertApp/jars
-                                    </outputDirectory>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <argLine>${jacoco.agent.argLine}</argLine>
-                    <environmentVariables>
-                        <testEnvironmentVariable>EnvironmentVariable</testEnvironmentVariable>
-                    </environmentVariables>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
+                <artifactId>maven-remote-resources-plugin</artifactId>
+                <version>${maven.remote.resources.plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>jacoco-initialize</id>
                         <goals>
-                            <goal>prepare-agent</goal>
+                            <goal>process</goal>
                         </goals>
                         <configuration>
-                            <destFile>${basedir}/target/jacoco.exec</destFile>
-                            <propertyName>jacoco.agent.argLine</propertyName>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>jacoco-site</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                        <configuration>
-                            <dataFile>${basedir}/target/jacoco.exec</dataFile>
-                            <outputDirectory>${basedir}/target/coverage-reports/site</outputDirectory>
+                            <resourceBundles>
+                                <resourceBundle>org.apache:apache-jar-resource-bundle:1.4</resourceBundle>
+                            </resourceBundles>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <io.siddhi.test.framework.version>5.1.0-m2</io.siddhi.test.framework.version>
+        <org.testcontainers.version>1.12.0</org.testcontainers.version>
+        <wso2.carbon.tools.version>5.2.10</wso2.carbon.tools.version>
+        <carbon.datasources.version>1.1.4</carbon.datasources.version>
+        <testng.version>6.14.3</testng.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <pax.logging.log4j2.version>1.11.0</pax.logging.log4j2.version>
+        <siddhi.version>5.1.11</siddhi.version>
+        <siddhi.io.nats.version>2.0.4</siddhi.io.nats.version>
+        <siddhi.io.http.version>2.1.0</siddhi.io.http.version>
+        <siddhi.map.json.version>5.0.3</siddhi.map.json.version>
+        <siddhi.store.rdbms.version>6.0.2</siddhi.store.rdbms.version>
+        <mysql.connector.version>8.0.16</mysql.connector.version>
+        <protobuf.version>3.6.1</protobuf.version>
+        <org.jacoco.version>0.8.4</org.jacoco.version>
+    </properties>
 </project>
