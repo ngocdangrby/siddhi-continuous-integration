@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/dang/Desktop/project/siddhi/siddhi-test-suite/siddhi-test-suite/src/test/java/siddhi/test/suite/AbstractTemperatureAlertAppTests.java">
+</file>
+<file name="/home/dang/Desktop/project/siddhi/siddhi-test-suite/siddhi-test-suite/src/test/java/siddhi/test/suite/TemperatureAlertAppBlackBoxTests.java">
+</file>
+<file name="/home/dang/Desktop/project/siddhi/siddhi-test-suite/siddhi-test-suite/src/test/java/siddhi/test/suite/TemperatureAlertAppUnitTests.java">
+</file>
+<file name="/home/dang/Desktop/project/siddhi/siddhi-test-suite/siddhi-test-suite/src/test/java/siddhi/test/suite/TemperatureAlertAppIntegrationTests.java">
+</file>
+<file name="/home/dang/Desktop/project/siddhi/siddhi-test-suite/siddhi-test-suite/src/test/resources/log4j.properties">
+</file>
+</checkstyle>

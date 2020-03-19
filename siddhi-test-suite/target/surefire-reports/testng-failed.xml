@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [siddhi-distribution-test-suite]">
+  <test thread-count="5" verbose="0" name="stream-processor-core(failed)">
+    <classes>
+      <class name="siddhi.test.suite.TemperatureAlertAppUnitTests">
+        <methods>
+          <include name="testMoniteredFilter"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- siddhi.test.suite.TemperatureAlertAppUnitTests -->
+    </classes>
+  </test> <!-- stream-processor-core(failed) -->
+</suite> <!-- Failed suite [siddhi-distribution-test-suite] -->

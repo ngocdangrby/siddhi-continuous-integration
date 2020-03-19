@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">siddhi-distribution-test-suite</th></tr>
+<tr><td><a href="#t0">stream-processor-core</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">80,790</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">siddhi-distribution-test-suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">stream-processor-core &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">siddhi.test.suite.TemperatureAlertAppUnitTests</td><td><a href="#m0">testMoniteredFilter</a></td><td rowspan="1">1584601244519</td><td rowspan="1">1278</td></tr><tr><th colspan="4">stream-processor-core &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">siddhi.test.suite.TemperatureAlertAppIntegrationTests</td><td><a href="#m1">testAppOutput</a></td><td rowspan="1">1584601318648</td><td rowspan="1">307</td></tr><tr class="passedeven"><td><a href="#m2">testDBPersistence</a></td><td rowspan="1">1584601319071</td><td rowspan="1">1000</td></tr><tr class="passedeven"><td><a href="#m3">testMessageConsumption</a></td><td rowspan="1">1584601318956</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m4">testMessagePublishingWithSiddhi</a></td><td rowspan="1">1584601318958</td><td rowspan="1">112</td></tr><tr class="passedodd"><td rowspan="1">siddhi.test.suite.TemperatureAlertAppUnitTests</td><td><a href="#m5">testSiddhiRunnerStartup</a></td><td rowspan="1">1584601245808</td><td rowspan="1">15394</td></tr></tbody>
+</table>
+<h2>stream-processor-core</h2><h3 id="m0">siddhi.test.suite.TemperatureAlertAppUnitTests#testMoniteredFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at siddhi.test.suite.TemperatureAlertAppUnitTests$1.receive(TemperatureAlertAppUnitTests.java:72)
+	at io.siddhi.core.query.output.callback.QueryCallback.send(QueryCallback.java:86)
+	at io.siddhi.core.query.output.callback.QueryCallback.receiveStreamEvent(QueryCallback.java:81)
+	at io.siddhi.core.query.output.ratelimit.OutputRateLimiter.sendToCallBacks(OutputRateLimiter.java:86)
+	at io.siddhi.core.query.output.ratelimit.PassThroughOutputRateLimiter.process(PassThroughOutputRateLimiter.java:44)
+	at io.siddhi.core.query.selector.QuerySelector.process(QuerySelector.java:97)
+	at io.siddhi.core.query.processor.filter.FilterProcessor.process(FilterProcessor.java:58)
+	at io.siddhi.core.query.input.ProcessStreamReceiver.processAndClear(ProcessStreamReceiver.java:182)
+	at io.siddhi.core.query.input.ProcessStreamReceiver.process(ProcessStreamReceiver.java:89)
+	at io.siddhi.core.query.input.ProcessStreamReceiver.receive(ProcessStreamReceiver.java:178)
+	at io.siddhi.core.stream.StreamJunction.sendData(StreamJunction.java:268)
+	at io.siddhi.core.stream.StreamJunction.access$200(StreamJunction.java:61)
+	at io.siddhi.core.stream.StreamJunction$Publisher.send(StreamJunction.java:501)
+	at io.siddhi.core.stream.input.InputDistributor.send(InputDistributor.java:49)
+	at io.siddhi.core.stream.input.InputEntryValve.send(InputEntryValve.java:75)
+	at io.siddhi.core.stream.input.InputHandler.send(InputHandler.java:52)
+	at siddhi.test.suite.TemperatureAlertAppUnitTests.testMoniteredFilter(TemperatureAlertAppUnitTests.java:82)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">siddhi.test.suite.TemperatureAlertAppIntegrationTests#testAppOutput</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">siddhi.test.suite.TemperatureAlertAppIntegrationTests#testDBPersistence</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">siddhi.test.suite.TemperatureAlertAppIntegrationTests#testMessageConsumption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">siddhi.test.suite.TemperatureAlertAppIntegrationTests#testMessagePublishingWithSiddhi</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">siddhi.test.suite.TemperatureAlertAppUnitTests#testSiddhiRunnerStartup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
