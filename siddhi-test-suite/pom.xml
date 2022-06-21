@@ -198,7 +198,7 @@
         <siddhi.io.http.version>2.1.0</siddhi.io.http.version>
         <siddhi.map.json.version>5.0.3</siddhi.map.json.version>
         <siddhi.store.rdbms.version>6.0.2</siddhi.store.rdbms.version>
-        <mysql.connector.version>8.0.16</mysql.connector.version>
+        <mysql.connector.version>8.0.28</mysql.connector.version>
         <protobuf.version>3.6.1</protobuf.version>
         <org.jacoco.version>0.8.4</org.jacoco.version>
     </properties>
