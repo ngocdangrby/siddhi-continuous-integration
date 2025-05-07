@@ -192,7 +192,7 @@
         <carbon.datasources.version>1.1.4</carbon.datasources.version>
         <testng.version>6.14.3</testng.version>
         <slf4j.version>1.7.12</slf4j.version>
-        <pax.logging.log4j2.version>1.11.0</pax.logging.log4j2.version>
+        <pax.logging.log4j2.version>2.0.13</pax.logging.log4j2.version>
         <siddhi.version>5.1.11</siddhi.version>
         <siddhi.io.nats.version>2.0.4</siddhi.io.nats.version>
         <siddhi.io.http.version>2.1.0</siddhi.io.http.version>
